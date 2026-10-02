@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-serif: "Newsreader", serif;
+
+  --color-ivory-50: #FDFBF7;
+  --color-ivory-100: #F9F6F0;
+  --color-ivory-200: #F0ECE1;
+  --color-ivory-300: #E4DECB;
+
+  --color-ink-900: #0F172A;
+  --color-ink-800: #1E293B;
+  --color-ink-700: #334155;
+  --color-ink-600: #475569;
+  --color-ink-500: #64748B;
+  --color-ink-400: #94A3B8;
+  --color-ink-300: #CBD5E1;
+
+  --color-pyblue-50: #EFF6FF;
+  --color-pyblue-100: #DBEAFE;
+  --color-pyblue-200: #BFDBFE;
+  --color-pyblue-400: #60A5FA;
+  --color-pyblue-500: #2563EB;
+  --color-pyblue-600: #1D4ED8;
+  --color-pyblue-700: #1E40AF;
+  --color-pyblue-800: #1E3A8A;
+
+  --color-pygold-400: #FBBF24;
+  --color-pygold-500: #F59E0B;
+  --color-pygold-600: #D97706;
+
+  --color-lavender-50: #F5F3FF;
+  --color-lavender-100: #EDE9FE;
+  --color-lavender-200: #DDD6FE;
+  --color-lavender-400: #A78BFA;
+  --color-lavender-500: #8B5CF6;
+  --color-lavender-600: #7C3AED;
+}
+
+/* Background grid pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+}
+
+.badge-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Timeline indicator line */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 20px;
+  width: 2px;
+  background: linear-gradient(180deg, #2563EB 0%, #8B5CF6 50%, #E2E8F0 100%);
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
